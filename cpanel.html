@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <link href="css/foundation.min.css" rel="stylesheet" />        
+        <link href="css/font-awesome.css" rel="stylesheet" />
+        <link href="css/cp.css" rel="stylesheet" />
+        
+        <script src="js/jquery-2.0.3.min.js" type="text/javascript"></script>
+        
+        <script src="js/foundation.min.js" type="text/javascript"></script>
+        <script src="js/handlebars.js" type="text/javascript"></script>
+        <script src="js/cav.js" type="text/javascript"></script>
+        
+        <script type="text/template-x" id="tmp-producto">
+            {{#data}}
+            <article class='large-4 columns pnl-producto' data-id='{{idProducto}}' data-activo='{{activo}}'>
+                <div class='row panel'>
+                    <div class='small-12 columns'>
+                        <h6>       Fotografía principal                 </h6>
+                        <a class='th img-logo' href='#'>
+                          <img src='img/db_imgs/{{imagen}}'>
+                        </a>
+                    </div>
+                    <div class='small-12 columns'>
+                        <h6>       Galería de imagenes    </h6>
+                        <button type="button" class="button btn-galeria expand" data-id='{{idProducto}}'>Galeria</button>
+                    </div>
+                    <div class='small-12 columns'>
+                        <label>
+                            Titulo:
+                            <input type='text' placeholder='Nombre de producto..' class='txtNombre' value='{{nombre}}' {{#isActivo activo}}{{/isActivo}} />
+                        </label>
+                    </div>
+                    <div class='small-12 columns'>
+                        <label>
+                            Categoría:
+                            <select class='cboCategoria' {{#isActivo activo}}{{/isActivo}}>
+                                {{#GetCategoria tipo}}{{/GetCategoria}}
+                            </select>
+                        </label>
+                    </div>
+                    <div class='small-12 columns'>
+                        <label>
+                            Descripción:
+                            <textarea placeholder='Descripción producto...' class='txaDescripcion' {{#isActivo activo}}{{/isActivo}}>{{descripcion}}</textarea>
+                        </label>
+                    </div>
+                   
+                    <div class='small-6 columns'>
+                        <label>
+                            Marca:
+                            <input type='text' class='txtMarca' placeholder='Marca...' value='{{marca}}' {{#isActivo activo}}{{/isActivo}} />
+                        </label>
+                    </div>
+                  
+                    <div class='small-6 columns'>
+                        <label>
+                            Precio:
+                            <input type='text' class='txtPrecio' placeholder='Precio...' value='{{precio}}' {{#isActivo activo}}{{/isActivo}} />
+                        </label>
+                    </div>
+                    <div class='small-4 columns'>
+                        <button class='btn-guradar expand success' {{#isActivo activo}}{{/isActivo}}><i class='fa fa-save'></i> Guardar</button>
+                    </div>
+                    <div class='small-4 columns'>
+                        <button class='btn-visible expand primary'><i class='fa fa-eye{{#isActivoIco activo}}{{/isActivoIco}}'></i> Visible</button>
+                    </div>
+                    <div class='small-4 columns'>
+                        <button class='btn-eliminar expand alert'><i class='fa fa-times'></i> Eliminar</button>
+                    </div>
+                </div>
+            </article>
+            {{/data}}
+        </script>
+
+        <script type="text/template-x" id="tmp-tr-galeria">
+            {{#data}}
+            <tr data-id="{{idGaleria}}">
+                <td><i class='fa fa-times' data-id="{{idGaleria}}" data-direccion="{{direccion}}"></i></td>
+                <td><img src="{{direccion}}" /></td>
+            </tr>
+            {{/data}}
+        </script>
+    </head>
+    <body>
+        <div class="loading isHidden">
+            <div id="topLoader"></div>
+        </div>
+
+        <button type="button" class="button success expand btn-nuevo">Agregar Producto<i class="fa fa-plus"></i></button>
+        
+        <section id="pnlProductos" class="row special">            
+        </section>
+
+        <div class="reveal-modal reveal-modal-galery small" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+            <form class="row form-galeria" enctype="multipart/form-data">
+                <div class="small-12 columns">
+                    <h2 id="modalTitle">Galeria</h2>
+                </div>
+                <div class="small-12 columns">
+                    <button type="button" class="button success btn-agregar-modal">Agregar</button>
+                    <button type="button" class="button alert btn-cerrar-modal">Cerrar</button>
+                </div>
+                <div class="small-12 columns">
+                    <table class="gv-galeria table table-custom">
+                        <thead>
+                            <tr>
+                                <th class="min">Operaciones</th>
+                                <th>Foto</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+                <input type="file" name="files_galeria[]" class="files-modal isHidden" multiple="multiple" accept=" image/*">  
+            </form>
+            
+            <a class="close-reveal-modal" aria-label="Close">&#215;</a>          
+        </div>
+        
+        <form enctype="multipart/form-data" class="global-form-file isHidden">
+            <input id="upIBottom" name="upIBottom" type="file"/>
+            <input type="file" id="upFiles" name="files[]" multiple="multiple" accept="image/*">
+        </form>
+    </body>
+</html>
