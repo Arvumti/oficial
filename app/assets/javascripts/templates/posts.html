@@ -1,0 +1,224 @@
+<section id="posts">
+	<div class="titulo">
+		<h3>Catálogos | <b>Artículos</b></h3>
+	</div>
+	<div class="row">
+		<table class="gvDatos"></table>
+	</div>
+	<div class="large modal-save reveal-modal reveal-custom small" data-reveal='data-reveal'>
+		<div class="pop-head">
+			<label>Artículos<label>
+		</div>
+		<form class="form-data pop-body" enctype="multipart/form-data" data-abide>
+			<div class="row">
+				<div class="small-3 columns">
+					<div class="up-foto" data-field="foto">
+					</div>
+				</div>
+				<div class="small-9 columns">
+					<div class="row">
+						<div class="small-8 columns">
+							<label>
+								Titulo: <small>requerido</small>
+								<input type="text" placeholder="Titulo" tabindex="1" data-field="titulo" maxlength="100" required/>
+							</label>
+							<small class="error">Este campo es requerido</small>
+						</div>
+						<div class="small-4 columns">
+							<label>
+								Fecha:
+								<input type="text" placeholder="YYYY-MM-DD" tabindex="4" data-field="fecha" class="date" maxlength="10" required/>
+							</label>
+							<small class="error">Este campo es requerido</small>
+						</div>
+					</div>
+					<div class="row">
+						<div class="small-6 columns">
+							<label>
+								Sección:
+								<input type="text" placeholder="Sección" data-field="idEspecial" data-include="especial" class="tya" required/>
+							</label>
+							<small class="error">Este campo es requerido</small>
+						</div>										
+						<div class="small-6 columns">
+							<label>
+								Autor
+								<input type="text" placeholder="Autor" data-field="idAutor" data-include="autor" class="tya" required/>
+							</label>
+						</div>
+						<div class="small-12 columns">
+							<label>
+								Ubicación
+								<input type="text" placeholder="Ubicación" data-field="ubicacion" required/>
+							</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="small-12 columns">
+							<label>
+								Texto:
+								<div class="menuArticulo">
+								<div class="group">
+									<label id="bold" class="active"><i class="icon-bold" id="bold"></i></label>
+									<label id="removeBold"><i class="icon-bold"></i></label>
+									<label id="italic" class="active"><i class="icon-italic"></i></label>
+									<label id="removeItalic"><i class="icon-italic"></i></label>
+								</div>
+								<div class="group">
+									<label id="makeUnorderedList" class="active"><i class="icon-listpoint"></i></label>
+									<label id="removeList"><i class="icon-listpoint"></i></label>									
+									<label id="underline" class="active"><i class="icon-underline"></i></label>
+									<label id="removeUnderline"><i class="icon-underline"></i></label>
+								</div>
+								<div class="group">
+									<label id="setTextColour" class="prompt"><i class="icon-color"></i></label>
+									<label id="makeLink" class="prompt"><i class="icon-link"></i></label>
+									<label id="undo"><i class="icon-undo"></i></label>
+									<label id="redo"><i class="icon-redo"></i></label>								
+								</div>
+								</div>																
+								<div id="editor"></div>
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+		<br/>
+		<div class="row pop-footer">
+			<div class="small-12 columns">
+				<button type="button" class="btn-aceptar tiny success button ico-guardar">Guardar</button>
+				<button type="button" class="btn-cancelar tiny alert button ico-cancelar">Cancelar</button>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="small-12 columns">
+			<button type="button" class="btnAdd btn-nuevo button tiny aceptar success ico-agregar">Agregar</button>
+			<button type="button" class="btn-modificar  button tiny modificar ico-modificar">Modificar</button>
+			<button type="button" class="btn-eliminar  button tiny cancelar alert ico-cancelar">Eliminar</button>
+			<button type="button" class="btn-anuncios  button tiny">Anuncios</button>
+			<button type="button" class="btn-fotos  button tiny">Fotos</button>
+		</div>
+	</div>
+
+	<div class="large modal-anuncios reveal-modal reveal-custom small" data-reveal='data-reveal'>
+		<div class="pop-head">
+			<label>Anuncios<label>
+		</div>
+		<form class="form-data formAnuncio pop-body" enctype="multipart/form-data" data-abide>
+			<div class="small-12 columns">
+				<label>
+					Anuncios:
+					<input type="text" placeholder="anuncio" data-field="idAnuncio" class="tya" required/>
+				</label>
+				<small class="error">Este campo es requerido</small>
+			</div>
+			<div class="small-12 columns">
+				<div class="gvAnuncios"></div>
+			</div>
+		</form>
+		<br/>
+		<div class="row pop-footer">
+			<div class="small-12 columns">
+				<button type="button" class="btn-aceptarAnuncio tiny success button ico-guardar">Guardar</button>
+				<button type="button" class="btn-cancelar tiny alert button ico-cancelar">Cancelar</button>
+			</div>
+		</div>
+	</div>
+	<div class="large modal-fotos  reveal-modal reveal-custom small" data-reveal='data-reveal'>
+		<div class="pop-head">
+			<label>Fotos<label>
+		</div>
+		<form class="form-data formFoto pop-body" enctype="multipart/form-data" data-abide>
+			<div class="small-12 columns">
+				<label>
+					Fotos:
+					<input type="text" placeholder="Foto" data-field="idGaleria" class="tya" required/>
+				</label>
+				<small class="error">Este campo es requerido</small>
+			</div>
+			<div class="small-12 columns">
+				<div class="gvFotos"></div>
+			</div>
+		</form>
+		<br/>
+		<div class="row pop-footer">
+			<div class="small-12 columns">
+				<button type="button" class="btn-aceptarFoto tiny success button ico-guardar">Guardar</button>
+				<button type="button" class="btn-cancelar tiny alert button ico-cancelar">Cancelar</button>
+			</div>
+		</div>
+	</div>
+	<script type="text/x-handlebars-template" class="tmp_anuncios">
+		<table>
+			<thead>
+				<tr class="titulo">
+					<th class="min">Opciones</th>
+					<th>Anuncios</th>
+					<th>Principal</th>
+				</tr>
+			</thead>
+			<tbody>
+				{{#datos}}
+						<tr>
+							<td class="min"><i class="icon-cross delete" data-idpostanuncio="{{idPostAnuncio}}"></i></td>
+								{{#anuncio}}
+									<td>{{titulo}}</td>
+								{{/anuncio}}
+							<td class="min">
+								{{#ifCond principal 1}}	
+									<input type="checkbox" name="principal" value="principal" data-field="principal" data-idpostanuncio="{{idPostAnuncio}}" checked="true">
+								{{else}}
+										<input type="checkbox" name="principal" value="principal" data-field="principal" data-idpostanuncio="{{idPostAnuncio}}">
+								{{/ifCond}}
+							</td>
+						</tr>
+				{{/datos}}
+			</tbody>
+		</table>
+	</script>
+	<script type="text/x-handlebars-template" class="tmp_fotos">
+		<table>
+			<thead>
+				<tr class="titulo">
+					<th class="min">Opciones</th>
+					<th>Fotos</th>
+				</tr>
+			</thead>
+			<tbody>
+				{{#datos}}
+						<tr>
+							<td class="min"><i class="icon-cross delete" data-galeria={{idPostFoto}}></i></td>
+							{{#galeria}}
+								<td>{{titulo}}</td>
+							{{/galeria}}
+						</tr>
+				{{/datos}}
+			</tbody>
+		</table>
+	</script>
+	<script type="text/javascript" charset="utf-8">
+		  var div = document.getElementById( 'editor' );
+		  var editor = new Squire( div, {
+			  blockTag: 'p',
+			  blockAttributes: {'class': 'paragraph'},
+			  tagAttributes: {
+				  ul: {'class': 'UL'},
+				  ol: {'class': 'OL'},
+				  li: {'class': 'listItem'}
+			  }
+		  });
+
+		  document.addEventListener( 'click', function ( e ) {
+			var id = e.target.id,
+				value;
+			if ( id && editor && editor[ id ] ) {
+			  if ( e.target.className === 'prompt' ) {
+				value = prompt( 'Value:' );
+			  }
+			  editor[ id ]( value );
+			}
+		  }, false );
+	</script>
+</section>

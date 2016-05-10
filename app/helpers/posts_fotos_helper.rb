@@ -1,0 +1,2 @@
+module PostsFotosHelper
+end

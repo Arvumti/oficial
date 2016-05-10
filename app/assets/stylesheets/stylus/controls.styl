@@ -1,0 +1,228 @@
+.bb-grid 
+	margin 0 auto
+	
+	thead
+		border 1px solid #DDD
+		background-color #FEFEFE
+		
+		span
+			color #333
+
+		.gv-order 
+			cursor  pointer
+			
+			&.gv-asc strong span::after 
+				content  icon-asc
+				float  right
+				font-family  'icomoon'
+				font-size  1em
+				font-weight  normal !important
+			
+			&.gv-desc strong span::after 
+				content  icon-desc
+				float  right
+				font-family  'icomoon'
+				font-size  1em
+				font-weight  normal !important
+				
+			input 
+				height  1.7em
+				font-weight  normal !important
+			
+		.gv-col-command::before 
+			content  icon-settings
+			font-family  'icomoon'
+			font-size  1.5em
+			font-weight  normal
+	
+	tbody
+		border 1px solid #DDD
+		
+		input[type="checkbox"] 
+			border 1px solid blue !important
+			display  inline-block
+			height  80% !important
+			margin-top  1em
+			width  80% !important
+			
+		tr
+			&.isSelected
+				background-color #31353D
+
+				td
+					color #EEE
+					font-weight bold
+			
+	tfoot
+		border 1px solid transparent
+		background-color white
+		
+		tr 
+			td
+				font-weight normal !important
+
+		.gv-all::before 
+			content  icon-all
+			font-family  'icomoon'
+			font-size  1.7em
+			
+		.gv-begin::before 
+			content  icon-begin
+			font-family  'icomoon'
+			font-size  1.7em
+
+		.gv-end::before 
+			content  icon-end
+			font-family  'icomoon'
+			font-size  1.7em
+			
+		.gv-next::before 
+			content  icon-next
+			font-family  'icomoon'
+			font-size  1.7em
+
+		.gv-none::before 
+			content  icon-calendar
+			font-family  'icomoon'
+			font-size  1.7em
+			
+		.gv-pager
+			
+			.columns
+				height 30px
+				padding-top 5px
+			
+			a,
+			span,
+			input 
+				color  #333
+				display  inline-block !important
+				line-height  25px
+				vertical-align  top
+				
+			a:hover
+				color  #F22
+				transition-duration  0.5s
+
+		.gv-pages
+			height  25px !important
+			width  50px !important
+
+		.gv-prev 
+			margin-top -7px
+			transform  rotate(180deg)
+
+			&::before 
+				content  icon-next
+				font-family  'icomoon'
+				font-size  1.7em
+.datepicker-close
+	display none
+
+.gfr-panel
+	border 1px solid gray
+	height 400px
+	width 600px
+
+.up-foto
+	height 210px
+	width 100%
+	text-align center
+
+	img
+		border 1px solid #DDD
+		height 200px
+		width 200px
+
+.twitter-typeahead
+	display block
+	width 100%
+
+	&.error
+		padding 0 !important
+
+	.error
+		margin 0 !important
+	
+	.tt-dropdown-menu
+		margin-top -10px
+
+	.tt-hint,
+	.tt-input
+		padding-left 30px
+
+	.tya-search
+		background-color #2A2A38
+		color #FFF
+		content icon-search
+		font-family 'icomoon'
+		height 41px
+		left 0
+		line-height 41px
+		position absolute
+		text-align center
+		top 0
+		width 27px
+		z-index 1
+
+	.tya-clear
+		display none
+		position absolute
+		right 10px
+		top 12px
+
+	.tya-loading
+		display none
+		color #33D
+		position absolute
+		right 30px
+		top 12px
+
+		&::before
+			content icon-spinner
+			font-family 'icomoon'
+.pnlAlert
+	heigh auto
+	margin-top 65px
+	position absolute
+	right 0
+	top 0
+	width 300px
+	z-index 190
+
+	.close
+		font-weight bold
+		opacity 1
+		top 20px
+.reveal-custom
+	border-radius 11px
+	border-radius 11px
+		
+	.pop-head
+		background-color color-base
+		position absolute
+		top 0px
+		left 0px
+		right 0px
+		padding-bottom 20px
+		
+		height 35px
+		border-top-left-radius 10px
+		border-top-right-radius 10px
+
+		label
+			color #fff
+			position absolute
+			top 5px
+			left 10px
+			font-weight bold
+	.pop-body
+		margin-top 25px
+.tt-input
+	background-color #FFF !important
+	&:disabled
+		background-color #DEDEDE !important
+		
+	&:disabled~.tya-clear
+		display none !important
+	/*&.soloLectura*/

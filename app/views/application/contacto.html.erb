@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<link rel="shortcut icon" href="/assets/pagina/img/favicon.png">
+		<title>Realia</title>
+		<link href="/assets/pagina/css/bootstrap.min.css" rel="stylesheet">
+		<link href="/assets/pagina/css/plugins.css" rel="stylesheet">
+		<link href="/assets/pagina/css/color/azul.css" rel="stylesheet">
+
+		<link href="/assets/pagina/estilo.css" rel="stylesheet">
+		<link href="/assets/pagina/fix.css" rel="stylesheet">
+		<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+		<link href="/assets/pagina/fonts/icons.css" rel="stylesheet">
+	</head>
+	<body>
+		<div id="cargar_web">
+			<div class="carga_texto">Cargando</div>
+			<div id="status">
+				<div class="rueda"></div>
+			</div>
+		</div>
+		<main class="marco_principal">
+			<div class="navbar light">
+				<div class="navbar-header">
+					<div class="marco_basico">
+						<div class="navbar_realia"><img width="250px" src="/assets/pagina/img/logo.png" class="logo-light" alt=""/><img width="100px" src="/assets/pagina/img/logo.png" class="logo-dark" alt=""/></div>
+						<a class="btn menu_responsivo" data-toggle="collapse" data-target=".navbar-collapse">
+							<i></i>
+						</a>
+					</div>
+				</div>
+				<nav class="collapse navbar-collapse">
+					<ul class="nav navbar-nav">
+						<li class=" dropdown">
+							<a href="" class="dropdown-toggle js-activated"><%= link_to "Inicio", :controller => "application" %>
+								<span class="caret"></span>
+							</a>
+						</li>
+						<li class="dropdown">
+							<a href="" class="dropdown-toggle js-activated"><%= link_to "Articulos", :controller => "articulos" %>
+								<span class="caret"></span>
+							</a>
+						</li>
+						<li class="dropdown">
+							<a href="" class="dropdown-toggle js-activated"><%= link_to "Acerca de", :controller => "acerca" %>
+								<span class="caret"></span>
+							</a>
+						</li>
+						<li class="dropdown current">
+							<a href="#" class="dropdown-toggle js-activated"><%= link_to "Contacto", :controller => "contacto" %>
+								<span class="caret"></span>
+							</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="cuadro_social">
+					<ul class="social publico">
+						<% if @info.present? %>
+						<li>
+							<a href="<%= @info['facebook'] %>">
+								<i class="icon-s-facebook"></i>
+							</a>
+						</li>
+						<li>
+							<a href="<%= @info['twitter'] %>">
+								<i class="icon-s-twitter"></i>
+							</a>
+						</li>
+						<% end %>
+					</ul>
+				</div>
+			</div>
+			<div class="offset"></div>
+			<div id="seccion_contacto_img"></div>
+			<div class="contenedor_claro">
+				<div class="container inner">
+					<div class="row">
+						<div class="col-sm-12">
+							<h2 class="titulo_seccion">Contacto</h2>
+							<p>Llena este formulario para contactarnos y poder atender tus inquietudes. En revista Realia estamos para servirte</p>
+							<div data-alert class="alert-box warning round is-hidden" id="alertBox">
+								Todos Los Campos Son Obligatorios.								
+							</div>
+							<div class="dividir10"></div>
+							<div class="form-container">
+								<form action="contacto/enviarCorreo" method="post" class="vanilla vanilla-form" novalidate="novalidate">
+									<div class="row">
+										<div class="col-sm-6">
+											<div class="form-field">
+												<label>
+													<input type="text" id="nombre"	name="nombre" placeholder="Nombre" required="required">
+												</label>
+											</div>
+										</div>
+										<div class="col-sm-6">
+											<div class="form-field">
+												<label>
+													<input type="email" id="email" name="email" placeholder="Tu e-mail" required="required">
+												</label>
+											</div>
+										</div>
+										<div class="col-sm-6">
+											<div class="form-field">
+												<label>
+													<input type="tel" id="telefono" name="tel" placeholder="Teléfono">
+												</label>
+											</div>
+										</div>
+										<div class="col-sm-6">
+											<div class="form-field">
+												<label class="custom-select">
+													<select name="department" required="required">
+														<option value="SinCategoria">Seleccióna el motivo</option>
+														<option value="Ventas">Ventas</option>
+														<option value="Información">Información</option>
+														<option value="Otro">Otro</option>
+													</select>
+													<span></span>
+												</label>
+											</div>
+										</div>
+									</div>
+									<textarea name="mensaje" placeholder="Escribe tu mensaje..." required="required" id="mensaje"></textarea>
+									<input type="submit" class="btn" value="Enviar" id="btn_enviar" data-error="Fix errors" data-processing="Enviando..." data-success="Gracias!">									
+								</form>
+							</div>
+						</div>
+						<aside class="col-sm-4"></aside>
+					</div>
+				</div>
+			</div>
+			<footer class="footer cuadro_inverso">
+				<div class="container inner">
+					<div class="row">
+						<div class="col-sm-4"></div>
+						<div class="col-sm-4">
+							<div class="espacio">
+								<h4 class="espacio_titulo">Social Media</h4>
+								<ul class="social">
+									<% if @info.present? %>
+									<li>
+										<a href="<%= @info['facebook'] %>">
+											<i class="icon-s-facebook"></i>
+										</a>
+									</li>
+									<li>
+										<a href="<%= @info['twitter'] %>">
+											<i class="icon-s-twitter"></i>
+										</a>
+									</li>
+									<% end %>
+								</ul>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="espacio">
+								<h4 class="espacio_titulo">Contactanos</h4>
+								<p>No dudes en llamarnos o enviarnos un mail.</p>
+								<div class="info_contacto">
+									<% if @info.present? %>
+										<i class="icon-location"></i>
+										<%= @info['direccion'] %>
+										<br/>
+										<i class="icon-phone"></i><%= @info['telefono'] %>
+										<br/>
+										<i class="icon-mail"></i>
+										<%= @info['correo'] %>
+									<% end %>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="sub-footer">
+					<div class="container inner">
+						<p class="centrar_texto">© 2016 Realia. Diseño
+							<a href="http://www.armedigital.com/">Arme Digital</a>.</p>
+						</p>
+					</div>
+				</div>
+			</footer>
+		</main>
+		<script src="/assets/pagina/js/jquery.min.js"></script>
+		<script src="/assets/pagina/js/bootstrap.min.js"></script>
+		<script src="/assets/pagina/js/plugins.js"></script>
+		<script src="/assets/pagina/js/classie.js"></script>
+		<script src="/assets/pagina/js/jquery.tools.min.js"></script>
+		<script src="/assets/pagina/js/scripts.js"></script>
+
+		<script>
+			function inicio(argument) {
+				$('#btn_enviar').on('click', function(e) {
+					debugger
+					if($('#email').val().trim().length == 0) {
+						e.preventDefault();
+						var alert = $('#alertBox');
+						alert.removeClass('is-hidden');
+						return
+					}
+					else {
+						var alert = $('#alertBox');
+						alert.addClass('is-hidden');
+					}
+					if($('#nombre').val().trim().length == 0) {
+						e.preventDefault();
+						var alert = $('#alertBox');
+						alert.removeClass('is-hidden');
+						return
+					}
+					else {
+						var alert = $('#alertBox');
+						alert.addClass('is-hidden');
+					}
+					if($('#telefono').val().trim().length == 0) {
+						e.preventDefault();
+						var alert = $('#alertBox');
+						alert.removeClass('is-hidden');
+						return
+					}
+					else {
+						var alert = $('#alertBox');
+						alert.addClass('is-hidden');
+					}
+					if($('#mensaje').val().trim().length == 0) {
+						e.preventDefault();
+						var alert = $('#alertBox');
+						alert.removeClass('is-hidden');
+						return
+					}
+					else {
+						var alert = $('#alertBox');
+						alert.addClass('is-hidden');
+					}
+				});
+			}
+
+			$(document).on('ready', inicio);
+		</script>
+	</body>
+</html>

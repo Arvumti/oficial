@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<head>
+	<title>Realia</title>
+	<link rel="stylesheet" href="/assets/normalize.css">
+	<link rel="stylesheet" href="/assets/foundation.min_v5.css">
+	<link rel="stylesheet" href="/assets/font-awesome.min.css">
+	<link rel="stylesheet" href="/assets/icomoon.css">
+	<link rel="stylesheet" href="/assets/stylus/main.css">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+	<script type="text/javascript" src="/assets/deps/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript">
+		$(document).on('ready', inicio);
+
+		function inicio (argument) {
+			var button = $('button.btn-login');
+			var txtUser = $('#txtUsuario');
+			var txtPass = $('#txtPassword');
+			var msnError = $('.msnError');
+			var formData = $('.form-data');
+			var icoUser = $('.userLabel');
+			var icoPass = $('.passLabel');
+			//var icoLoading = $('.loading.icon-spin');
+
+			$('.btn-login').on('click', function() {				
+				var usuario = txtUser.val(),
+					contrasenia = txtPass.val();
+
+				if(usuario.length == 0) {
+					icoUser.addClass('ico-error');
+					txtUser.focus();
+					return;
+				}
+				else {
+					icoUser.removeClass('ico-error');
+				}
+				if(contrasenia.length == 0) {
+					icoPass.addClass('ico-error');
+					txtPass.focus();
+					return;
+				}
+				else {
+					icoPass.removeClass('ico-error');
+				}
+
+				button.attr('disabled', 'disabled');
+				txtUser.attr('disabled', 'disabled');
+				txtPass.attr('disabled', 'disabled');
+				//icoLoading.removeClass('isHidden');
+
+				var xhr = $.post('/usuarios/login', {usuario:usuario, contrasenia:contrasenia});
+				xhr.done(function(data) {					
+					if(data.errmsg) {
+						msnError.removeClass('is-hidden');
+						icoUser.removeClass('ico-error');
+						icoPass.removeClass('ico-error');
+						//$('span.spn-error').addClass('error').text('El usuario o la contraseña no son correctos')
+						//.css({ 'background-color':'red', color:'#EEE', padding:'0.5em 1em', 'margin-top':'1.5em' })
+						;
+					}
+					else {						
+						formData.html('<div class="small-4 small-centered columns succes-login"><h4 class="text-login">Iniciando</h4><br/><i class="icon-spinner icon-loading "></i></div>');
+						debugger
+						window.location.href = window.location.origin + '/application/main';
+						
+						//formData.addClass('is-hidden');
+					}
+				});
+
+				xhr.always(function(){
+					button.removeAttr('disabled', 'disabled');
+					txtUser.removeAttr('disabled', 'disabled');
+					txtPass.removeAttr('disabled', 'disabled');
+					//icoLoading.addClass('isHidden');
+				});
+			});
+		}
+	</script>
+
+	<%= csrf_meta_tags %>
+</head>
+<body class="login">
+	<!-- <header class="text-center">
+		<h1>Sistema Integral de Gestion y Control Escolar</h1>
+	</header> -->
+
+	<br /><br />
+	<div class="row">
+		<div class="small-8 small-centered columns datos-login">
+			<img src="/assets/logow.png">			
+			<div class="small-12 columns">
+				<label>						
+					<input type="text" id="txtUsuario" autocomplete="false" placeholder="Nombre de usuario">
+				</label>
+			</div>
+			<div class="small-12 columns">
+				<label>						
+					<input type="password" id="txtPassword" autocomplete="false" placeholder="Contraseña">
+				</label>
+			</div>
+			<div class="small-12 columns">
+				<button type="button" class="btn-login">Iniciar sesion</button>
+			</div>
+		</div>
+	</div>
+
+	</div>
+
+	<script type="text/javascript">
+		window._token = '<%= form_authenticity_token %>';
+	</script>
+</body>
