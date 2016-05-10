@@ -1,0 +1,40 @@
+{:uriI"Šfile://app/assets/javascripts/templates/categorias.html?type=text/html&id=a67584c8a9a0a79f39a01e6bec511d9e9c60f89e03b8feb531e8f1703f6842cb:ET:load_pathI"app/assets/javascripts;T:filenameI"5app/assets/javascripts/templates/categorias.html;T:	nameI"templates/categorias;T:logical_pathI"templates/categorias.html;T:content_typeI"text/html;T:sourceI"e<section id="categorias">
+	<div class="titulo">
+		<h3>Catalogos | <b>Categorias</b></h3>
+	</div>
+	<div class="row">
+		<table class="gvDatos"></table>
+	</div>
+	<div class="large modal-save reveal-modal reveal-custom small" data-reveal='data-reveal'>
+		<div class="pop-head">
+			<label>Categoria<label>
+		</div>
+		<form class="form-data pop-body" enctype="multipart/form-data" data-abide>
+			<div class="row">
+				<div class="small-12 columns">
+					<label>
+						Nombre: <small>requerido</small>
+						<input type="text" placeholder="Nombre" tabindex="1" data-field="nombre" maxlength="100" required/>
+					</label>
+					<small class="error">Este campo es requerido</small>
+				</div>
+			</div>
+		</form>
+		<div class="row pop-footer">
+			<div class="small-12 columns">
+				<button type="button" class="btn-aceptar tiny success button ico-guardar">Guardar</button>
+				<button type="button" class="btn-cancelar tiny alert button ico-cancelar">Cancelar</button>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="small-12 columns">
+			<button type="button" class="btnAdd btn-nuevo button tiny aceptar success ico-agregar">Agregar</button>
+			<button type="button" class="btn-modificar  button tiny modificar ico-modificar">Modificar</button>
+			<button type="button" class="btn-eliminar  button tiny cancelar alert ico-cancelar">Eliminar</button>
+		</div>
+	</div>
+</section>;T:metadata{	:dependencieso:Set:
+@hash{	I"environment-version;TTI"environment-paths;TTI"2processors:type=text/html&file_type=text/html;TTI"Cfile-digest://app/assets/javascripts/templates/categorias.html;TT:charsetI"
+utf-8;F:digest"%*<Ø“Ó.¦ç×Í2¬ãÌ lÏ@ú¹Á¼¨ó}¨òÅG:lengthie:dependencies_digest"%ËR9ûˆ­0Œrh`–zQY®ÜÃþ#‡Óñ¢‰¾XZ:idI"Ea67584c8a9a0a79f39a01e6bec511d9e9c60f89e03b8feb531e8f1703f6842cb;F:
+mtimel+\éW

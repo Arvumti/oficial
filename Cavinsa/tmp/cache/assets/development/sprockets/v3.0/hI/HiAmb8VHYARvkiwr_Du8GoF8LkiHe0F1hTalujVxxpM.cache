@@ -1,0 +1,89 @@
+{:uriI"àfile://app/assets/javascripts/templates/anuncios.html?type=text/html&id=95e148bcf7bf2f4ab56bb9fa54ef78d78f81fe548f84fa350bcac34881513205:ET:load_pathI"app/assets/javascripts;T:filenameI"3app/assets/javascripts/templates/anuncios.html;T:	nameI"templates/anuncios;T:logical_pathI"templates/anuncios.html;T:content_typeI"text/html;T:sourceI"ä
+<section id="anuncios">
+	<div class="titulo">
+		<h3>Cat√°logos | <b>Anuncios</b></h3>
+	</div>
+	<div class="row">
+		<table class="gvDatos"></table>
+	</div>
+	<div class="large modal-save reveal-modal reveal-custom small" data-reveal='data-reveal'>
+		<div class="pop-head">
+			<label>Anuncio<label>
+		</div>
+		<form class="form-data pop-body" enctype="multipart/form-data" data-abide>
+			<div class="row">
+				<div class="small-3 columns">
+					<div class="up-foto" data-field="foto">
+					</div>
+				</div>
+				<div class="small-9 columns">
+					<div class="row">
+						<div class="small-8 columns">
+							<label>
+								Titulo: <small>requerido</small>
+								<input type="text" placeholder="Titulo" tabindex="1" data-field="titulo" maxlength="100" required/>
+							</label>
+							<small class="error">Este campo es requerido</small>
+						</div>
+						<div class="small-4 columns">
+							<label>
+								Vigencia:
+								<input type="text" placeholder="YYYY-MM-DD" tabindex="4" data-field="vigencia" class="date" maxlength="10"/>
+							</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="small-12 columns">
+							<label>
+								Texto:
+								<!--<textarea placeholder="Texto" tabindex="3" rows="4" data-field="texto" maxlength="4000"></textarea>-->
+								<div id="editor"></div>
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+		<br/>
+		<div class="row pop-footer">
+			<div class="small-12 columns">
+				<button type="button" class="btn-aceptar tiny success button ico-guardar">Guardar</button>
+				<button type="button" class="btn-cancelar tiny alert button ico-cancelar">Cancelar</button>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="small-12 columns">
+			<button type="button" class="btnAdd btn-nuevo button tiny aceptar success ico-agregar">Agregar</button>
+			<button type="button" class="btn-modificar  button tiny modificar ico-modificar">Modificar</button>
+			<button type="button" class="btn-eliminar  button tiny cancelar alert ico-cancelar">Eliminar</button>
+		</div>
+	</div>
+	<script type="text/javascript" charset="utf-8">
+			  var div = document.getElementById( 'editor' );
+			  var editor = new Squire( div, {
+				  blockTag: 'p',
+				  blockAttributes: {'class': 'paragraph'},
+				  tagAttributes: {
+					  ul: {'class': 'UL'},
+					  ol: {'class': 'OL'},
+					  li: {'class': 'listItem'}
+				  }
+			  });
+
+			  document.addEventListener( 'click', function ( e ) {
+				var id = e.target.id,
+					value;
+				if ( id && editor && editor[ id ] ) {
+				  if ( e.target.className === 'prompt' ) {
+					value = prompt( 'Value:' );
+				  }
+				  editor[ id ]( value );
+				}
+			  }, false );
+		</script>
+</section>;T:metadata{	:dependencieso:Set:
+@hash{	I"environment-version;TTI"environment-paths;TTI"2processors:type=text/html&file_type=text/html;TTI"Afile-digest://app/assets/javascripts/templates/anuncios.html;TT:charsetI"
+utf-8;F:digest"%¥p¢«CëªLc-6 Î‹∆2ﬂ)U8≈á´Wã0‰ì:lengthiä
+:dependencies_digest"%§πüÅK∫Ç“ò˙´S≈ïÅ÷.`≠P„Âe‚3zlíﬂ:idI"E95e148bcf7bf2f4ab56bb9fa54ef78d78f81fe548f84fa350bcac34881513205;F:
+mtimel+)W

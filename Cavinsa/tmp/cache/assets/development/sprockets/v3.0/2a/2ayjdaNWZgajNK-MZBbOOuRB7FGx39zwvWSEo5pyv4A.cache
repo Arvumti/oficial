@@ -1,0 +1,54 @@
+{:uriI"‹file://app/assets/javascripts/templates/comentarios.html?type=text/html&id=32a3adae62394e0c79e7cb61938702f4365d2146f1fa9e4c26a17855e49f11c5:ET:load_pathI"app/assets/javascripts;T:filenameI"6app/assets/javascripts/templates/comentarios.html;T:	nameI"templates/comentarios;T:logical_pathI"templates/comentarios.html;T:content_typeI"text/html;T:sourceI"<section id="comentarios">
+	<div class="titulo">
+		<h3>Catalogos | <b>Comentarios</b></h3>
+	</div>
+	<div class="row">
+		<table class="gvDatos"></table>
+	</div>
+	<div class="large modal-save reveal-modal reveal-custom small" data-reveal='data-reveal'>
+		<div class="pop-head">
+			<label>Comentario<label>
+		</div>
+		<form class="form-data pop-body" enctype="multipart/form-data" data-abide>
+			<div class="row">
+				<div class="small-8 columns">
+					<label>
+						Titulo: <small>requerido</small>
+						<input type="text" placeholder="Titulo" tabindex="1" data-field="titulo" maxlength="100" required/>
+					</label>
+					<small class="error">Este campo es requerido</small>
+				</div>
+				<div class="small-4 columns">
+					<label>
+						Fecha:
+						<input type="text" placeholder="YYYY-MM-DD" tabindex="2" data-field="fecha" class="date" maxlength="10"/>
+					</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="small-12 columns">
+					<label>
+						Texto:
+						<textarea placeholder="Texto" tabindex="3" data-field="texto" maxlength="4000"></textarea>
+					</label>
+				</div>
+			</div>
+		</form>
+		<div class="row pop-footer">
+			<div class="small-12 columns">
+				<button type="button" class="btn-aceptar tiny success button ico-guardar">Guardar</button>
+				<button type="button" class="btn-cancelar tiny alert button ico-cancelar">Cancelar</button>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="small-12 columns">
+			<button type="button" class="btnAdd btn-nuevo button tiny aceptar success ico-agregar">Agregar</button>
+			<button type="button" class="btn-modificar  button tiny modificar ico-modificar">Modificar</button>
+			<button type="button" class="btn-eliminar  button tiny cancelar alert ico-cancelar">Eliminar</button>
+		</div>
+	</div>
+</section>;T:metadata{	:dependencieso:Set:
+@hash{	I"environment-version;TTI"environment-paths;TTI"2processors:type=text/html&file_type=text/html;TTI"Dfile-digest://app/assets/javascripts/templates/comentarios.html;TT:charsetI"
+utf-8;F:digest"%®Ç˜†mVàIÒ¡`éaXş}Â¹’:ì$‡Ï^G4ê:lengthi:dependencies_digest"%Ëûm¤¸åJ*m.3R…ö_„jJ’Ÿ<¯¹ö¹ÌdaF:idI"E32a3adae62394e0c79e7cb61938702f4365d2146f1fa9e4c26a17855e49f11c5;F:
+mtimel+\éW

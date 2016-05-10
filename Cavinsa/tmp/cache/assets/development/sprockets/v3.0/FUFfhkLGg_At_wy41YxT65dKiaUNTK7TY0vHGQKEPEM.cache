@@ -1,0 +1,79 @@
+{:uriI"ˆfile://app/assets/javascripts/templates/galerias.html?type=text/html&id=78b0f42b09bde6591fde3cd27fdbc08b3c81303113d615700fe4115f9b9be544:ET:load_pathI"app/assets/javascripts;T:filenameI"3app/assets/javascripts/templates/galerias.html;T:	nameI"templates/galerias;T:logical_pathI"templates/galerias.html;T:content_typeI"text/html;T:sourceI"Ë	<section id="galerias">
+	<div class="titulo">
+		<h3>Catalogos | <b>Galeria</b></h3>
+	</div>
+	<div class="row">
+		<table class="gvDatos"></table>
+	</div>
+	<div class="large modal-save reveal-modal reveal-custom small" data-reveal='data-reveal'>
+		<div class="pop-head">
+			<label>Galeria<label>
+		</div>
+		<form class="form-data pop-body" enctype="multipart/form-data" data-abide>
+			<div class="row">
+				<div class="small-3 columns">
+					<div class="up-foto" data-field="foto">
+					</div>
+				</div>
+				<div class="small-9 columns">
+					<div class="row">
+						<div class="small-8 columns">
+							<label>
+								Titulo: <small>requerido</small>
+								<input type="text" placeholder="Titulo" tabindex="1" data-field="titulo" maxlength="100" required/>
+							</label>
+							<small class="error">Este campo es requerido</small>
+						</div>
+						<div class="small-4 columns">
+							<label>
+								Vigencia:
+								<input type="text" placeholder="YYYY-MM-DD" tabindex="4" data-field="vigencia" class="date" maxlength="10"/>
+							</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="small-3 columns">
+							<label>
+								Categoria:
+								<input type="text" placeholder="Categoria" data-field="idCategoria" class="tya" required/>
+							</label>
+							<small class="error">Este campo es requerido</small>
+						</div>
+						<div class="small-3 columns">
+							<label>
+								Tipo:
+								<select data-field="tipo">
+									<option value="1">Foto</option>
+									<option value="2">Video</option>
+								</select>
+							</label>
+						</div>
+						<div class="small-6 columns">
+							<label>
+								Video:
+								<input type="text" placeholder="Video" tabindex="3" data-field="video" maxlength="255"/>
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+		<br/>
+		<div class="row pop-footer">
+			<div class="small-12 columns">
+				<button type="button" class="btn-aceptar tiny success button ico-guardar">Guardar</button>
+				<button type="button" class="btn-cancelar tiny alert button ico-cancelar">Cancelar</button>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="small-12 columns">
+			<button type="button" class="btnAdd btn-nuevo button tiny aceptar success ico-agregar">Agregar</button>
+			<button type="button" class="btn-modificar  button tiny modificar ico-modificar">Modificar</button>
+			<button type="button" class="btn-eliminar  button tiny cancelar alert ico-cancelar">Eliminar</button>
+		</div>
+	</div>
+</section>;T:metadata{	:dependencieso:Set:
+@hash{	I"environment-version;TTI"environment-paths;TTI"2processors:type=text/html&file_type=text/html;TTI"Afile-digest://app/assets/javascripts/templates/galerias.html;TT:charsetI"
+utf-8;F:digest"%fLËÖÑèÝžep{9ž¿>~ýk•¯÷0®²‚¯ðª:lengthiË	:dependencies_digest"%éx\÷4}…³RÇ®Á€n^dâ¼&‰Çêµ¢Ý‰Áì:idI"E78b0f42b09bde6591fde3cd27fdbc08b3c81303113d615700fe4115f9b9be544;F:
+mtimel+\éW

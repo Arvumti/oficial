@@ -1,0 +1,72 @@
+{:uriI"‡file://app/assets/javascripts/templates/autores.html?type=text/html&id=690b6b21c63ba73d2bf2cda71d01d938596d1c221b70a8367dac93ac5705f64f:ET:load_pathI"app/assets/javascripts;T:filenameI"2app/assets/javascripts/templates/autores.html;T:	nameI"templates/autores;T:logical_pathI"templates/autores.html;T:content_typeI"text/html;T:sourceI"	<section id="autores">
+	<div class="titulo">
+		<h3>CatÃ¡logos | <b>Autores</b></h3>
+	</div>
+	<div class="row">
+		<table class="gvDatos"></table>
+	</div>
+	<div class="large modal-save reveal-modal reveal-custom small" data-reveal='data-reveal'>
+		<div class="pop-head">
+			<label>Autores<label>
+		</div>
+		<form class="form-data pop-body" enctype="multipart/form-data" data-abide>
+			<div class="row">
+				<div class="small-3 columns">
+					<div class="up-foto" data-field="foto">
+					</div>
+				</div>
+				<div class="small-9 columns">
+					<div class="row">
+						<div class="small-12 columns">
+							<label>
+								Nombre: <small>requerido</small>
+								<input type="text" placeholder="Nombre" tabindex="1" data-field="nombre" maxlength="100" required/>
+							</label>
+							<small class="error">Este campo es requerido</small>
+						</div>					
+					</div>
+					<div class="row">
+						<div class="small-6 columns">
+							<label>
+								Facebook:
+								<input type="text" placeholder="Facebook" data-field="facebook"required/>
+							</label>
+							<small class="error">Este campo es requerido</small>
+						</div>
+						<div class="small-6 columns">
+							<label>
+								Twitter:
+								<input type="text" placeholder="Twitter" data-field="twitter"/>
+							</label>
+						</div>
+						<div class="small-12 columns">
+							<label>
+								InformaciÃ³n:
+								<textarea placeholder="informacion" tabindex="3" data-field="informacion" maxlength="4000"></textarea>
+							</label>
+							<small class="error">Este campo es requerido</small>
+						</div>				
+					</div>
+				</div>
+			</div>
+		</form>
+		<br/>
+		<div class="row pop-footer">
+			<div class="small-12 columns">
+				<button type="button" class="btn-aceptar tiny success button ico-guardar">Guardar</button>
+				<button type="button" class="btn-cancelar tiny alert button ico-cancelar">Cancelar</button>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="small-12 columns">
+			<button type="button" class="btnAdd btn-nuevo button tiny aceptar success ico-agregar">Agregar</button>
+			<button type="button" class="btn-modificar  button tiny modificar ico-modificar">Modificar</button>
+			<button type="button" class="btn-eliminar  button tiny cancelar alert ico-cancelar">Eliminar</button>			
+		</div>
+	</div>	
+</section>
+;T:metadata{	:dependencieso:Set:
+@hash{	I"environment-version;TTI"environment-paths;TTI"2processors:type=text/html&file_type=text/html;TTI"@file-digest://app/assets/javascripts/templates/autores.html;TT:charsetI"
+utf-8;F:digest"%ª¨gCÃäµ´03¦g²ÊûÑLùÇşÄm^iÌêÂ:lengthi	:dependencies_digest"%²õ†Gç¹EÊ“_èR¹àÚp(¹¡o°ºû:idI"E690b6b21c63ba73d2bf2cda71d01d938596d1c221b70a8367dac93ac5705f64f;F:
+mtimel+t£'W

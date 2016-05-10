@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<link rel="shortcut icon" href="/assets/pagina/img/favicon.png">
+		<title>Realia</title>
+		<link href="/assets/pagina/css/bootstrap.min.css" rel="stylesheet">
+		<link href="/assets/pagina/css/plugins.css" rel="stylesheet">
+		<link href="/assets/pagina/css/color/azul.css" rel="stylesheet">
+
+		<link href="/assets/pagina/fix.css" rel="stylesheet">
+		<link href="/assets/pagina/estilo.css" rel="stylesheet">
+		<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+		<link href="/assets/pagina/fonts/icons.css" rel="stylesheet">
+	</head>
+	<body>
+		<div id="cargar_web">
+			<div class="carga_texto">Cargando</div>
+			<div id="status">
+				<div class="rueda"></div>
+			</div>
+		</div>
+		<main class="marco_principal">
+			<div class="navbar light">
+				<div class="navbar-header">
+					<div class="marco_basico">
+						<div class="navbar_realia"><img width="250px" src="/assets/pagina/img/logo.png" class="logo-light" alt=""/><img width="100px" src="/assets/pagina/img/logo.png" class="logo-dark" alt=""/>
+						</div>
+						<a class="btn menu_responsivo" data-toggle="collapse" data-target=".navbar-collapse">
+							<i></i>
+						</a>
+					</div>
+				</div>
+				<nav class="collapse navbar-collapse">
+					<ul class="nav navbar-nav">
+						<li class=" dropdown">
+							<a href="" class="dropdown-toggle js-activated"><%= link_to "Inicio", :controller => "application" %>
+								<span class="caret"></span>
+							</a>
+						</li>
+						<li class="current dropdown">
+							<a href="" class="dropdown-toggle js-activated"><%= link_to "Articulos", :controller => "articulos" %>
+								<span class="caret"></span>
+							</a>
+						</li>
+						<li class=" dropdown">
+							<a href="" class="dropdown-toggle js-activated"><%= link_to "Acerca de", :controller => "acerca" %>
+								<span class="caret"></span>
+							</a>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle js-activated"><%= link_to "Contacto", :controller => "contacto" %>
+								<span class="caret"></span>
+							</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="cuadro_social">
+					<ul class="social publico">
+						<% if @info.present? %>
+						<li>
+							<a href="<%= @info['facebook'] %>">
+								<i class="icon-s-facebook"></i>
+							</a>
+						</li>
+						<li>
+							<a href="<%= @info['twitter'] %>">
+								<i class="icon-s-twitter"></i>
+							</a>
+						</li>
+						<% end %>
+					</ul>
+				</div>
+			</div>
+			<div class="offset"></div>
+			<% if @post.length < 1 %>
+				<div class="contenedor_oscuro">
+					<div class="container inner2">
+						<div class="blog row fixPagina404">
+							<div class="col-sm-12 blog_contenido">
+								<div class="blog_posts vista_clasica">
+									<div class="post">
+										<div class="box centrar_texto">
+											<div class="post_contenido">
+												<h1>Aun no hay artículos en esta sección</h1>
+												<br/>
+												<br/>
+												<img width="250px" src="/assets/pagina/img/logo.png" class="logo-light" alt=""/>
+											</div>
+											<div class="post_footer">
+												<div class="clearfix"></div>
+											</div>
+										</div>
+									</div>									
+									<div class="dividir30"></div>
+								</div>
+							</div>							
+						</div>
+					</div>
+				</div>
+			<% else %>
+				<div class="contenedor_oscuro">
+					<div class="container inner">
+						<div class="dividir10"></div>
+						<div class="carousel_contenedor">
+							<div class="carousel carousel_caja blog">
+								<% @post.each do |item| %>
+								<div class="item post">
+									<a href="/articulos_detalles/<%= item['idPost'] %>">
+										<figure class="main">
+											<img src="<%= item['foto'] %>" alt="" class="imgPostMain"/>
+										</figure>
+										<div class="box centrar_texto boxFix">
+											<div class="categoria cat<%= item['idEspecial'] %>">
+												<span>
+													<a class="catFix"><%= item.especial.nombre %></a>
+												</span>
+											</div>
+											<h4 class="titulo_post">
+												<a href="/articulos_detalles/<%= item['idPost'] %>">
+													<%= item['titulo'] %></h4>
+											</a>
+											<div class="meta">
+												<span class="fecha"><%= item['fecha'] %></span>
+											</div>										
+										</div>
+									</a>
+								</div>
+								<% end %>
+							</div>
+						</div>
+					</div>
+				</div>
+			<% end %>
+			<footer class="footer cuadro_inverso">
+				<div class="container inner">
+					<div class="row">
+						<div class="col-sm-4"></div>
+						<div class="col-sm-4">
+							<div class="espacio">
+								<h4 class="espacio_titulo">Social Media</h4>
+								<ul class="social">
+									<% if @info.present? %>
+									<li>
+										<a href="<%= @info['facebook'] %>">
+											<i class="icon-s-facebook"></i>
+										</a>
+									</li>
+									<li>
+										<a href="<%= @info['twitter'] %>">
+											<i class="icon-s-twitter"></i>
+										</a>
+									</li>
+									<% end %>
+								</ul>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="espacio">
+								<h4 class="espacio_titulo">Contactanos</h4>
+								<p>No dudes en llamarnos o enviarnos un mail.</p>
+								<div class="info_contacto">
+									<% if @info.present? %>
+										<i class="icon-location"></i>
+										<%= @info['direccion'] %>
+										<br/>
+										<i class="icon-phone"></i><%= @info['telefono'] %>
+										<br/>
+										<i class="icon-mail"></i>
+										<%= @info['correo'] %>
+									<% end %>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="sub-footer">
+					<div class="container inner">
+						<p class="centrar_texto">© 2016 Realia. Diseño
+							<a href="http://www.armedigital.com/">Arme Digital</a>.</p>
+						</p>
+					</div>
+				</div>
+			</footer>
+		</main>
+		<script src="/assets/pagina/js/jquery.min.js"></script>
+		<script src="/assets/pagina/js/bootstrap.min.js"></script>
+		<script src="/assets/pagina/js/plugins.js"></script>
+		<script src="/assets/pagina/js/classie.js"></script>
+		<script src="/assets/pagina/js/jquery.tools.min.js"></script>
+		<script src="/assets/pagina/js/scripts.js"></script>
+	</body>
+</html>

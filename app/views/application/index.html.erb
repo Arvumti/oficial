@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="Industrial web templates for the mining company and service templates. Industrial web templates are designed with high standards and bootstrap framework.">
+		<meta name="keywords" content="Industiral Templates, Service Templates, Bootstrap, Responsive">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>CAVINSA</title>
+		<link href="/assets/pagina/css/bootstrap.min.css" rel="stylesheet">
+		<link href="/assets/pagina/css/estilo.css" rel="stylesheet">
+		<link href="/assets/pagina/css/camera.css" rel="stylesheet">
+		<link href="/assets/pagina/css/owl.theme.css" rel="stylesheet">
+		<link href="/assets/pagina/css/owl.carousel.css" rel="stylesheet">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700,500' rel='stylesheet' type='text/css'>
+		<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+		<link rel="shortcut icon" href="/assets/pagina/img/fav.png">
+	</head>
+	<body>
+		<div class="header_renglon" id="header_renglon">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-2">
+						<a class="nav_marca logo" href="index.html"><img src="/assets/pagina/img/logo.jpg" alt="CAVINSA LOGO"></a>
+					</div>
+					<div class="col-md-8 info_contacto">
+						<p>
+							<span class="num_telefono">
+								<i class="fa fa-phone"></i>+ 618 123456
+							</span>
+							<span class="mail-info">
+								<i class="fa fa-comments"></i>info@cavinsa.com
+							</span>
+						</p>
+					</div>
+					<div class="col-md-2">
+						<ul class="social_media flota_derecho">
+							<!--social icon start-->
+							<li>
+								<a href="#">
+									<i class="fa fa-facebook-square"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="top_navega">
+			<nav class="navbar navbar-default" role="navigation">
+				<div class="container">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+							<span class="sr-only">Navega</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					</div>
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav">
+							<li class="active">
+								<%= link_to "Inicio", :controller => "application" %>
+							</li>							
+							<li>
+								<%= link_to "Catalogo de Productos", :controller => "productos" %>
+							</li>						
+							<li>
+								<a>Contacto</a>
+							</li>
+						</ul>
+					</div>			
+				</div>
+			</nav>
+		</div>
+		<div class="slider_contenedor" id="slider">
+			<div class="contenedor_fluido">
+				<div class="camera_wrap" id="camera_wrap_1">
+					<div data-src="/assets/pagina/img/1.jpg">
+						<div class="camera_caption fadeIn">
+							<h1>Productos para la seguridad industrial</h1>
+							<a href="#" class="btn btn_estandar">Ver mas</a>
+						</div>
+					</div>
+					<div data-src="/assets/pagina/img/2.jpg">
+						<div class="camera_caption fadeIn">
+							<h1>Proveedor líder para la industria minera</h1>
+							<a href="#" class="btn btn_estandar">Ver mas</a>
+						</div>
+					</div>				
+				</div>
+			</div>
+		</div>
+		<div id="franja_linea"></div>
+		<div class="sobre_nosotros">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 titulo_enc">
+						<h1>Cavinsa una compañia de valor</h1>
+						<p>Somos una empresa dedicada al servicio y la cultura de la seguridad industrial por medio de una gama de productos y servicios de la más alta calidad.</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4 sobre_cavinsa">
+						<h1>Sobre</h1>
+						<p>La seguridad del personal que labora en las grandes industrias es nuestra prioridad, es por ello que ofrecemos .
+						</p>
+						<a href="#" class="btn_estandar btn">Ver artículos</a>
+					</div>
+					<div class="col-md-8 sobre_punnto">
+						<div class="row">
+							<div class="col-md-6 sobre_algo">
+								<h2>
+									<span>01.</span>Historia</h2>
+								<p>Sedquis viverra enim. Vivamus aliquet rutrum dui a varius. Mauris ornare tortor in eleifend blanditullam ut ligula et neque.</p>
+							</div>
+							<div class="col-md-6 sobre_algo">
+								<h2>
+									<span>02.</span>Visión</h2>
+								<p>Visión de la empresa</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6 sobre_algo">
+								<h2>
+									<span>03.</span>Misión</h2>
+								<p>Misión de la empresa.</p>
+							</div>
+							<div class="col-md-6 sobre_algo">
+								<h2>
+									<span>04.</span>Valores</h2>
+								<p>Valores de la empresa.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="seccion_servicios seccion_espacio">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 titulo_enc">
+						<h1>Servicios</h1>
+						<p>Información de los servicios.</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4 tp-service-block">
+						<div class="tp-thumb-pic">
+							<a href="#" title="Blasting Service">
+								<img class="img-responsive" src="/assets/pagina/img/servicio1.jpg" alt="">
+							</a>
+						</div>
+						<div class="tp-ser-dec">
+							<a href="#">
+								<h2>Servicio 1</h2>
+							</a>
+							<p>Información del servicio 1.</p>
+						</div>
+					</div>
+					<div class="col-md-4 tp-service-block">
+						<div class="tp-thumb-pic">
+							<a href="#" title="Blasting Service">
+								<img class="img-responsive" src="/assets/pagina/img/servicio2.jpg" alt="">
+							</a>
+						</div>
+						<div class="tp-ser-dec">
+							<a href="#">
+								<h2>Servicio 1</h2>
+							</a>
+							<p>Información del servicio 1.</p>
+						</div>
+					</div>
+					<div class="col-md-4 tp-service-block">
+						<div class="tp-thumb-pic">
+							<a href="#" title="Blasting Service">
+								<img class="img-responsive" src="/assets/pagina/img/servicio2.jpg" alt="">
+							</a>
+						</div>
+						<div class="tp-ser-dec">
+							<a href="#">
+								<h2>Servicio 1</h2>
+							</a>
+							<p>Información del servicio 1.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="quote-section" class="quote-section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 titulo_enc">
+						<h1>Proveedores de seguridad industrial.</h1>
+						<a href="#" class="btn btn_estandar">Contactanos</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="trusted" class="trusted-section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 titulo_enc">
+						<h1>Nuestros Clientes</h1>
+						<p>Confían en la calidad de nuestros productos pero sobre todo en el servicio que se les brinda.</p>
+					</div>
+				</div>
+				<div id="owl-demo">
+					<div class="item"><img src="/assets/pagina/img/cliente" alt="logotipo cliente"></div>
+					<div class="item"><img src="/assets/pagina/img/cliente2" alt="logotipo cliente"></div>
+					<div class="item"><img src="/assets/pagina/img/cliente3" alt="logotipo cliente"></div>
+					<div class="item"><img src="/assets/pagina/img/cliente4" alt="logotipo cliente"></div>
+					<div class="item"><img src="/assets/pagina/img/cliente5" alt="logotipo cliente"></div>
+				</div>
+			</div>
+		</div>
+		<div id="footer" class="footer-section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3 tp-ft-about">
+						<div class="ft-logo"><img src="/assets/pagina/img/logo-ft.png" alt=""></div>
+						<div class="address">
+							<ul>
+								<li>
+									<i class="fa fa-home"></i>Libertad 345<br>
+									Zona centro Durango México</li>
+								<li>
+									<i class="fa fa-phone"></i>618 122334</li>
+								<li>
+									<i class="fa fa-fax"></i>618 1112221</li>
+								<li>
+									<i class="fa fa-envelope"></i>info@cavinsa.com</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-3 tp-investor-relation">
+						<h2>Información</h2>
+						<ul>
+							<li>
+								<i class="fa fa-angle-double-right"></i>
+								<a href="#">Link</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-md-3 tp-pages-link">
+						<h2>Links</h2>
+						<ul>
+							<li>
+								<i class="fa fa-angle-double-right"></i>
+								<a href="#">Nosotros</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-md-3 tp-informations-link">
+						<h2>Más Links</h2>
+						<ul>
+							<li>
+								<i class="fa fa-angle-double-right"></i>
+								<a href="#">Algo</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="tiny-footer" class="tiny-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<p class="copyright-ct">© 2015 | Cavinsa
+						</p>
+					</div>
+					<div class="col-md-6">
+						<ul class="social_media-ft flota_derecho">
+							<li>
+								<a href="#">
+									<i class="fa fa-facebook-square"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="/assets/pagina/js/jquery-1.11.1.min.js"></script> 
+		<script type="text/javascript" src="/assets/pagina/js/jquery.dataTables.js"></script> 
+		<script type="text/javascript" src="/assets/pagina/js/bootstrap.min.js"></script> 
+		<script type="text/javascript" src="/assets/pagina/js/owl.carousel.js"></script> 
+		<script type="text/javascript" src="/assets/pagina/js/jquery.min.js"></script> 
+		<script type="text/javascript" src="/assets/pagina/js/jquery.mobile.customized.min.js"></script> 
+		<script type="text/javascript" src="/assets/pagina/js/jquery.easing.1.3.js"></script> 
+		<script type="text/javascript" src="/assets/pagina/js/camera.js"></script> 
+		<script type="text/javascript" src="/assets/pagina/js/script.js"></script> 
+
+		<script type="text/javascript">
+		jQuery(function(){
+		 jQuery('#camera_wrap_1').camera({
+		                
+		                fx: 'simpleFade',
+		                time: 5000,
+		                loader: 'bar',
+		                hover:false,
+		                playPause: false,
+		                height: '30%'
+		        
+		        });
+		        });</script>
+	</body>
+</html>

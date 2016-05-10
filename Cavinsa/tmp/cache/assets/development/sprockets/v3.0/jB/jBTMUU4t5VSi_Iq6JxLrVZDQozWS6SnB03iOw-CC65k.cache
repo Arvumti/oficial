@@ -1,0 +1,88 @@
+{:uriI"…file://app/assets/javascripts/templates/posts.html?type=text/html&id=9efe313525dea934f61d57434f38511377c9606e59456d17fb623a5af18957fa:ET:load_pathI"app/assets/javascripts;T:filenameI"0app/assets/javascripts/templates/posts.html;T:	nameI"templates/posts;T:logical_pathI"templates/posts.html;T:content_typeI"text/html;T:sourceI"£
+<section id="posts">
+	<div class="titulo">
+		<h3>Catalogos | <b>Posts</b></h3>
+	</div>
+	<div class="row">
+		<table class="gvDatos"></table>
+	</div>
+	<div class="large modal-save reveal-modal reveal-custom small" data-reveal='data-reveal'>
+		<div class="pop-head">
+			<label>Post<label>
+		</div>
+		<form class="form-data pop-body" enctype="multipart/form-data" data-abide>
+			<div class="row">
+				<div class="small-3 columns">
+					<div class="up-foto" data-field="foto">
+					</div>
+				</div>
+				<div class="small-9 columns">
+					<div class="row">
+						<div class="small-8 columns">
+							<label>
+								Titulo: <small>requerido</small>
+								<input type="text" placeholder="Titulo" tabindex="1" data-field="titulo" maxlength="100" required/>
+							</label>
+							<small class="error">Este campo es requerido</small>
+						</div>
+						<div class="small-4 columns">
+							<label>
+								Fecha:
+								<input type="text" placeholder="YYYY-MM-DD" tabindex="4" data-field="fecha" class="date" maxlength="10" required/>
+							</label>
+							<small class="error">Este campo es requerido</small>
+						</div>
+					</div>
+					<div class="row">
+						<div class="small-3 columns">
+							<label>
+								Categoria:
+								<input type="text" placeholder="Categoria" data-field="idCategoria" class="tya" required/>
+							</label>
+							<small class="error">Este campo es requerido</small>
+						</div>
+						<div class="small-3 columns">
+							<label>
+								Orden:
+								<input type="text" placeholder="Orden" data-field="orden" maxlength="3"/>
+							</label>
+						</div>
+						<div class="small-6 columns">
+							<label>
+								Link:
+								<input type="text" placeholder="Link" data-field="link" maxlength="255"/>
+							</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="small-12 columns">
+							<label>
+								Texto:
+								<textarea placeholder="Texto" tabindex="3" data-field="texto" maxlength="4000"></textarea>
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+		<br/>
+		<div class="row pop-footer">
+			<div class="small-12 columns">
+				<button type="button" class="btn-aceptar tiny success button ico-guardar">Guardar</button>
+				<button type="button" class="btn-cancelar tiny alert button ico-cancelar">Cancelar</button>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="small-12 columns">
+			<button type="button" class="btnAdd btn-nuevo button tiny aceptar success ico-agregar">Agregar</button>
+			<button type="button" class="btn-modificar  button tiny modificar ico-modificar">Modificar</button>
+			<button type="button" class="btn-eliminar  button tiny cancelar alert ico-cancelar">Eliminar</button>
+		</div>
+	</div>
+</section>;T:metadata{	:dependencieso:Set:
+@hash{	I"environment-version;TTI"environment-paths;TTI"2processors:type=text/html&file_type=text/html;TTI">file-digest://app/assets/javascripts/templates/posts.html;TT:charsetI"
+utf-8;F:digest"%üí?ó.Æ~ñJÚN« ˜8³&¶³ğGÂš­áœ–,zö:lengthi£
+:dependencies_digest"%Ú”pÙqÌÛ_š­?á¬ À›çb‡)A—İ1ˆ
+vd:idI"E9efe313525dea934f61d57434f38511377c9606e59456d17fb623a5af18957fa;F:
+mtimel+\éW

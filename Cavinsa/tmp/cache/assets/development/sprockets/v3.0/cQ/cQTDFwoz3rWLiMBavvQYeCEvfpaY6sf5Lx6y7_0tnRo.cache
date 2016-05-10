@@ -1,0 +1,58 @@
+{:uriI"èfile://app/assets/javascripts/templates/configuraciones.html?type=text/html&id=bca3bd4562feee75948a9a2eb62c33fff2233fffcb1cc71ec4a33e5d92e877f0:ET:load_pathI"app/assets/javascripts;T:filenameI":app/assets/javascripts/templates/configuraciones.html;T:	nameI"templates/configuraciones;T:logical_pathI"#templates/configuraciones.html;T:content_typeI"text/html;T:sourceI"Œ<section id="configuraciones">
+	<div class="titulo">
+		<h3>General | <b>Configuraciones</b></h3>
+	</div>
+	<form class="form-data" enctype="multipart/form-data" data-abide>
+		<div class="row">
+			<div class="small-3 columns">
+				<div class="up-foto" data-field="foto">
+				</div>
+			</div>
+			<div class="small-9 columns">
+				<div class="row">
+					<div class="small-4 columns">
+						<label>
+							Facebook:
+							<input type="text" placeholder="Facebook..." data-field="facebook" maxlength="100" />
+						</label>
+					</div>
+					<div class="small-4 columns">
+						<label>
+							Twitter:
+							<input type="text" placeholder="Twitter..." data-field="twitter" maxlength="100" />
+						</label>
+					</div>
+					<div class="small-4 columns">
+						<label>
+							Instagram:
+							<input type="text" placeholder="Instagram..." data-field="instagram" maxlength="100" />
+						</label>
+					</div>
+					<div class="small-12 columns">
+						<label>
+							Frase:
+							<input type="text" placeholder="Frase..." data-field="titulo" maxlength="100" />
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="small-12 columns">
+						<label>
+							Texto:
+							<textarea placeholder="Texto" data-field="texto"></textarea>
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="small-12 columns">
+						<button type="button" class="btn-save tiny button success">Guardar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+</section>;T:metadata{	:dependencieso:Set:
+@hash{	I"environment-version;TTI"environment-paths;TTI"2processors:type=text/html&file_type=text/html;TTI"Hfile-digest://app/assets/javascripts/templates/configuraciones.html;TT:charsetI"
+utf-8;F:digest"%|àGª#4\+Aòvê5 QÎ5ãÑLñﬂ†û)!„Q:lengthiŒ:dependencies_digest"%T
+`“ÛÄÌÅa—–ÉﬂL‹«5KG¸a"˙j¯=:idI"Ebca3bd4562feee75948a9a2eb62c33fff2233fffcb1cc71ec4a33e5d92e877f0;F:
+mtimel+UWW

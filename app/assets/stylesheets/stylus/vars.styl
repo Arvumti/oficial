@@ -1,0 +1,22 @@
+color-base = #21212A
+color-base-sub = #2A2A38
+color-font = #21212A
+color-font-hover = #FFFFFF
+color-hover= #35deaf
+
+clear()
+	margin 0
+	padding 0
+
+fsombra(x = 3px, y = 3px, d = 10px, c = #333)
+	text-shadow x y d c
+
+placeholder()
+	&::-webkit-input-placeholder
+		{block}
+	&:-moz-placeholder
+		{block}
+	&::-moz-placeholder
+		{block}
+	&:-ms-input-placeholder
+		{block}

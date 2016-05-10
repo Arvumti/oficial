@@ -1,0 +1,70 @@
+{:uriI"äfile://app/assets/javascripts/templates/especiales.html?type=text/html&id=5c61ebf38407a85e5564cc06687d948c8f3122623aca6624cf48455e8caa9e80:ET:load_pathI"app/assets/javascripts;T:filenameI"5app/assets/javascripts/templates/especiales.html;T:	nameI"templates/especiales;T:logical_pathI"templates/especiales.html;T:content_typeI"text/html;T:sourceI"I	<section id="especiales">
+	<div class="titulo">
+		<h3>Cat√°logos | <b>Secciones</b></h3>
+	</div>
+	<div class="row">
+		<table class="gvDatos"></table>
+	</div>
+	<div class="large modal-save reveal-modal reveal-custom small" data-reveal='data-reveal'>
+		<div class="pop-head">
+			<label>Especial<label>
+		</div>
+		<form class="form-data pop-body" enctype="multipart/form-data" data-abide>
+			<div class="row">
+				<div class="small-3 columns">
+					<div class="up-foto" data-field="foto">
+					</div>
+				</div>
+				<div class="small-9 columns">
+					<div class="row">
+						<div class="small-8 columns">
+							<label>
+								Nombre: <small>requerido</small>
+								<input type="text" placeholder="Nombre" tabindex="1" data-field="nombre" maxlength="100" required/>
+							</label>
+							<small class="error">Este campo es requerido</small>
+						</div>
+						<div class="small-4 columns">
+							<label>
+								Vigencia:
+								<input type="text" placeholder="YYYY-MM-DD" tabindex="2" data-field="vigencia" class="date" maxlength="10"/>
+							</label>
+						</div>
+						<div class="small-8 columns">
+							<label>
+								Titulo: <small>requerido</small>
+								<input type="text" placeholder="Titulo" tabindex="3" data-field="titulo" maxlength="500" required/>
+							</label>
+							<small class="error">Este campo es requerido</small>
+						</div>
+						<div class="small-12 columns">
+							<label>
+								Descripci√≥n: <small>requerido</small>
+								<input type="text" placeholder="Descripcion" tabindex="4" data-field="descripcion" required/>
+							</label>
+							<small class="error">Este campo es requerido</small>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+		<br/>
+		<div class="row pop-footer">
+			<div class="small-12 columns">
+				<button type="button" class="btn-aceptar tiny success button ico-guardar">Guardar</button>
+				<button type="button" class="btn-cancelar tiny alert button ico-cancelar">Cancelar</button>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="small-12 columns">
+			<button type="button" class="btnAdd btn-nuevo button tiny aceptar success ico-agregar">Agregar</button>
+			<button type="button" class="btn-modificar  button tiny modificar ico-modificar">Modificar</button>
+			<button type="button" class="btn-eliminar  button tiny cancelar alert ico-cancelar">Eliminar</button>
+		</div>
+	</div>
+</section>;T:metadata{	:dependencieso:Set:
+@hash{	I"environment-version;TTI"environment-paths;TTI"2processors:type=text/html&file_type=text/html;TTI"Cfile-digest://app/assets/javascripts/templates/especiales.html;TT:charsetI"
+utf-8;F:digest"%¢0$¥Ú˚JÇzvH∞}éÙ*Ãü…©ï-%Àßa1:lengthiI	:dependencies_digest"%çÿO}≠K
+!AÎJˇ†ï)Î6%µëõå[ií'gÉà:idI"E5c61ebf38407a85e5564cc06687d948c8f3122623aca6624cf48455e8caa9e80;F:
+mtimel+i(W

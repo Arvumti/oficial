@@ -1,0 +1,51 @@
+{:uriI"èfile://app/assets/javascripts/templates/configuraciones.html?type=text/html&id=ba365e66d2b337b16359542c3a276478c8c290c3dea812f92e15a93dfdba3516:ET:load_pathI"app/assets/javascripts;T:filenameI":app/assets/javascripts/templates/configuraciones.html;T:	nameI"templates/configuraciones;T:logical_pathI"#templates/configuraciones.html;T:content_typeI"text/html;T:sourceI"<section id="configuraciones">
+	<div class="titulo">
+		<h3>General | <b>Configuraciones</b></h3>
+	</div>
+	<form class="form-data" enctype="multipart/form-data" data-abide>
+		<div class="row">
+			<div class="small-3 columns">
+				<div class="up-foto" data-field="foto">
+				</div>
+			</div>
+			<div class="small-9 columns">
+				<div class="row">
+					<div class="small-4 columns">
+						<label>
+							Facebook:
+							<input type="text" placeholder="Facebook..." data-field="facebook" maxlength="100" />
+						</label>
+					</div>
+					<div class="small-4 columns">
+						<label>
+							Twitter:
+							<input type="text" placeholder="Twitter..." data-field="twitter" maxlength="100" />
+						</label>
+					</div>
+					<div class="small-4 columns">
+						<label>
+							Instagram:
+							<input type="text" placeholder="Instagram..." data-field="instagram" maxlength="100" />
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="small-12 columns">
+						<label>
+							Texto:
+							<textarea placeholder="Texto" data-field="texto"></textarea>
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="small-12 columns">
+						<button type="button" class="btn-save tiny button success">Guardar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+</section>;T:metadata{	:dependencieso:Set:
+@hash{	I"environment-version;TTI"environment-paths;TTI"2processors:type=text/html&file_type=text/html;TTI"Hfile-digest://app/assets/javascripts/templates/configuraciones.html;TT:charsetI"
+utf-8;F:digest"%\D£rËYÀ,°M∂AkÈ`˚t÷x“vdcSà b¯dÖ:lengthi:dependencies_digest"%˝õc`S0GG:XS=<‚tû.nÉ Ω‡0R÷ìÿÙΩ:idI"Eba365e66d2b337b16359542c3a276478c8c290c3dea812f92e15a93dfdba3516;F:
+mtimel+\ÈW
