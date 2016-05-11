@@ -26,7 +26,7 @@ ActiveSupport::Inflector.inflections do |inflect|
 	inflect.irregular 'comentario', 'comentarios'
 	inflect.irregular 'baner', 'baners'
 	inflect.irregular 'especial_detalle', 'especiales_detalles'
-	inflect.irregular 'articulo_detalle', 'articulos_detalles'
+	inflect.irregular 'producto_detalle', 'productos_detalles'
 	inflect.irregular 'seccion_detalle', 'secciones_detalles'
 	
 	inflect.irregular 'foto_post', 'fotos_posts'

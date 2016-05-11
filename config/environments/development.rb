@@ -39,8 +39,8 @@ Rails.application.configure do
     :address => "smtp.live.com", 
     :port  => '587',
     :domain  => 'localhost',
-    :user_name => "comentariosrealia@outlook.com",
-    :password => "RevRealiaComent16",
+    :user_name => "cavinsa_comentarios@outlook.com",
+    :password => "cavinsa2016",
     :authentication => "plain",
   }
 

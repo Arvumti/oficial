@@ -1,6 +1,5 @@
 class ContactoController < ApplicationController
-	def index
-		@info = Configuracion.first
+	def index		
 		render 'contacto.html.erb'
 	end
 	def enviarCorreo
@@ -8,7 +7,6 @@ class ContactoController < ApplicationController
 	  puts @persona.to_json	
       ActionCorreo.contacto_email(@persona).deliver      	
 	  puts 'correo enviado'
-	  @info = Configuracion.first
 	  #respond_to
 	  #render '/correo_enviado.html.erb'
 

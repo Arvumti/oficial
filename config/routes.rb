@@ -23,6 +23,13 @@ Rails.application.routes.draw do
   end
 
   resources :productos
+  resources :categorias
+  resources :productos_detalles
+  resources :contacto do
+    collection do
+      post 'enviarCorreo'
+    end
+  end
 
   #get 'main' => 'application#main'
 

@@ -9,6 +9,7 @@
 		<title>CAVINSA</title>
 		<link href="/assets/pagina/css/bootstrap.min.css" rel="stylesheet">
 		<link href="/assets/pagina/css/estilo.css" rel="stylesheet">
+		<link href="/assets/pagina/css/fix.css" rel="stylesheet">
 		<link href="/assets/pagina/css/camera.css" rel="stylesheet">
 		<link href="/assets/pagina/css/owl.theme.css" rel="stylesheet">
 		<link href="/assets/pagina/css/owl.carousel.css" rel="stylesheet">
@@ -22,7 +23,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-2">
-						<a class="nav_marca logo" href="index.html"><img src="/assets/pagina/img/logo.jpg" alt="CAVINSA LOGO"></a>
+						<a class="nav_marca logoCavinsa"><img src="/assets/pagina/img/logo1.png" alt="CAVINSA LOGO"></a>
 					</div>
 					<div class="col-md-8 info_contacto">
 						<p>
@@ -42,6 +43,17 @@
 									<i class="fa fa-facebook-square"></i>
 								</a>
 							</li>
+							<li>
+								<a href="#">
+									<i class="fa fa-twitter-square"></i>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="fa fa-google-plus-square"></i>
+								</a>
+							</li>
+						</ul>
 						</ul>
 					</div>
 				</div>
@@ -49,15 +61,7 @@
 		</div>
 		<div class="top_navega">
 			<nav class="navbar navbar-default" role="navigation">
-				<div class="container">
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-							<span class="sr-only">Navega</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
-					</div>
+				<div class="container">					
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<ul class="nav navbar-nav">
 							<li class="active">
@@ -67,7 +71,7 @@
 								<%= link_to "Catalogo de Productos", :controller => "productos" %>
 							</li>						
 							<li>
-								<a>Contacto</a>
+								<%= link_to "Contacto", :controller => "contacto" %>
 							</li>
 						</ul>
 					</div>			
@@ -167,9 +171,9 @@
 						</div>
 						<div class="tp-ser-dec">
 							<a href="#">
-								<h2>Servicio 1</h2>
+								<h2>Servicio 2</h2>
 							</a>
-							<p>Información del servicio 1.</p>
+							<p>Información del servicio 2.</p>
 						</div>
 					</div>
 					<div class="col-md-4 tp-service-block">
@@ -180,9 +184,9 @@
 						</div>
 						<div class="tp-ser-dec">
 							<a href="#">
-								<h2>Servicio 1</h2>
+								<h2>Servicio 3</h2>
 							</a>
-							<p>Información del servicio 1.</p>
+							<p>Información del servicio 3.</p>
 						</div>
 					</div>
 				</div>
@@ -192,8 +196,8 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12 titulo_enc">
-						<h1>Proveedores de seguridad industrial.</h1>
-						<a href="#" class="btn btn_estandar">Contactanos</a>
+						<h1>Proveedores de seguridad industrial.</h1>						
+						<%= link_to "Contactanos", {:controller => "contacto"}, :class => "btn btn_estandar" %>
 					</div>
 				</div>
 			</div>
@@ -208,59 +212,76 @@
 				</div>
 				<div id="owl-demo">
 					<div class="item"><img src="/assets/pagina/img/cliente" alt="logotipo cliente"></div>
-					<div class="item"><img src="/assets/pagina/img/cliente2" alt="logotipo cliente"></div>
-					<div class="item"><img src="/assets/pagina/img/cliente3" alt="logotipo cliente"></div>
-					<div class="item"><img src="/assets/pagina/img/cliente4" alt="logotipo cliente"></div>
-					<div class="item"><img src="/assets/pagina/img/cliente5" alt="logotipo cliente"></div>
+					<div class="item"><img src="/assets/pagina/img/cliente" alt="logotipo cliente"></div>
+					<div class="item"><img src="/assets/pagina/img/cliente" alt="logotipo cliente"></div>
+					<div class="item"><img src="/assets/pagina/img/cliente" alt="logotipo cliente"></div>
+					<div class="item"><img src="/assets/pagina/img/cliente" alt="logotipo cliente"></div>
 				</div>
 			</div>
 		</div>
 		<div id="footer" class="footer-section">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-3 tp-ft-about">
-						<div class="ft-logo"><img src="/assets/pagina/img/logo-ft.png" alt=""></div>
-						<div class="address">
+					<div class="col-md-4 tp-ft-about">
+						<div class="ft-logo logoCavinsa"><img src="/assets/pagina/img/logoW.png" alt=""></div>
+						<div class="address addressFix">
 							<ul>
 								<li>
-									<i class="fa fa-home"></i>Libertad 345<br>
-									Zona centro Durango México</li>
+									<i class="fa fa-home"></i>Libertad 350<br>
+									Zona centro, Durango Mexico</li>
 								<li>
-									<i class="fa fa-phone"></i>618 122334</li>
+									<i class="fa fa-phone"></i>1 618 808 603 6035</li>
 								<li>
-									<i class="fa fa-fax"></i>618 1112221</li>
+									<i class="fa fa-fax"></i>618 603 6035</li>
 								<li>
 									<i class="fa fa-envelope"></i>info@cavinsa.com</li>
 							</ul>
 						</div>
+
 					</div>
-					<div class="col-md-3 tp-investor-relation">
-						<h2>Información</h2>
+					<div class="col-md-4 tp-investor-relation">
+						<h2>Giros</h2>
 						<ul>
 							<li>
 								<i class="fa fa-angle-double-right"></i>
-								<a href="#">Link</a>
+								<a href="#">Industria Minera</a>
 							</li>
+							<li>
+								<i class="fa fa-angle-double-right"></i>
+								<a href="#">Construccion</a>
+							</li>
+							<li>
+								<i class="fa fa-angle-double-right"></i>
+								<a href="#">Materiales</a>
+							</li>
+							<li>
+								<i class="fa fa-angle-double-right"></i>
+								<a href="#">Transporte</a>
+							</li>							
 						</ul>
 					</div>
-					<div class="col-md-3 tp-pages-link">
-						<h2>Links</h2>
+
+					<div class="col-md-4 tp-pages-link">
+						<h2>Menú</h2>
 						<ul>
 							<li>
 								<i class="fa fa-angle-double-right"></i>
-								<a href="#">Nosotros</a>
+								<a href="#">Inicio</a>
 							</li>
-						</ul>
-					</div>
-					<div class="col-md-3 tp-informations-link">
-						<h2>Más Links</h2>
-						<ul>
 							<li>
 								<i class="fa fa-angle-double-right"></i>
-								<a href="#">Algo</a>
+								<a href="#">Servicios</a>
+							</li>
+							<li>
+								<i class="fa fa-angle-double-right"></i>
+								<a href="#">Catálogo</a>
+							</li>
+							<li>
+								<i class="fa fa-angle-double-right"></i>
+								<a href="#">Contacto</a>
 							</li>
 						</ul>
-					</div>
+					</div>					
 				</div>
 			</div>
 		</div>
@@ -268,14 +289,35 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6">
-						<p class="copyright-ct">© 2015 | Cavinsa
+						<p class="copyright-ct">© 2016 CAVINSA |
 						</p>
+
 					</div>
 					<div class="col-md-6">
 						<ul class="social_media-ft flota_derecho">
 							<li>
 								<a href="#">
 									<i class="fa fa-facebook-square"></i>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<i class="fa fa-twitter-square"></i>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<i class="fa fa-google-plus-square"></i>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<i class="fa  fa-rss-square"></i>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<i class="fa  fa-linkedin-square"></i>
 								</a>
 							</li>
 						</ul>

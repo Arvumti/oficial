@@ -15,6 +15,7 @@
 		<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700,500' rel='stylesheet' type='text/css'>
 		<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 		<link rel="shortcut icon" href="/assets/pagina/img/fav.png">
+
 	</head>
 	<body>
 		<div class="header_renglon" id="header_renglon">
@@ -49,7 +50,6 @@
 								</a>
 							</li>
 						</ul>
-						</ul>
 					</div>
 				</div>
 			</div>
@@ -63,7 +63,7 @@
 							<li>
 								<%= link_to "Inicio", :controller => "application" %>
 							</li>							
-							<li class="active">
+							<li>
 								<%= link_to "Catalogo de Productos", :controller => "productos" %>
 							</li>						
 							<li>
@@ -73,101 +73,78 @@
 					</div>
 				</div>
 			</nav>
-		</div>			
+		</div>
 		<div class="main-wrapper">
 			<div class="woo-shop" id="woo-shop">
 				<div class="container">
 					<div class="row">
-						<div class="col-md-9 shop-listing">
+						<div class="col-md-12 shop-details">
+
 							<div class="row">
-								<!-- <div class="col-md-8">
-									<p>Mostrando X Productos</p>
-								</div> -->
-							</div>
-							<div class="row products">
-								<% if @producto.present? %>	
-									<% @producto.each do |item| %>
-										<% if item.oferta != 0 %>													
-											<div class="col-md-4 product-box <%= item.categoria.nombre %> itemProducto">
-												<a href="/productos_detalles/<%= item['idProducto'] %>">
-													<span class="offer">Oferta</span>
-													<div class="product-wrap"><img src="<%= item['foto'] %>" alt=""></div>
-												</a>
-												<h2>
-													<a href="/productos_detalles/<%= item['idProducto'] %>"><%= item['nombre'] %></a>
-												</h2>
-												<p class="price">
-													<span class="price-del">$<%= item['precio'] %></span>$<%= item['oferta'] %>
-												</p>									
-												<a href="/productos_detalles/<%= item['idProducto'] %>" class="btn btn_estandar">
-													<i class="fa fa-shopping-cart"></i>Ver detalles
-												</a>
-											</div>
-										<% else %>											
-											<div class="col-md-4 product-box <%= item.categoria.nombre %> itemProducto">
-												<a href="/productos_detalles/<%= item['idProducto'] %>">
-													<div class="product-wrap"><img src="<%= item['foto'] %>" alt=""></div>
-												</a>
-												<h2>
-													<a href="/productos_detalles/<%= item['idProducto'] %>"><%= item['nombre'] %></a>
-												</h2>
-												<p class="price">$<%= item['precio'] %></p>
-												<a href="/productos_detalles/<%= item['idProducto'] %>" class="btn btn_estandar">
-													<i class="fa fa-shopping-cart"></i>Ver detalles
-												</a>
-											</div>
-										<% end %>
-									<% end %>
-									<div class="col-md-12 blog-pagination">
-										<ul class="pagination">
-											<li class="active">
-												<a href="#">1
-													<span class="sr-only">(current)</span>
-												</a>
-											</li>											
-											<li>
-												<a href="#">
-													<span aria-hidden="true">»</span>
-													<span class="sr-only">Next</span>
-												</a>
-											</li>
-										</ul>
-									</div>
-								<% end %>
-							</div>
-						</div>
-
-						<div class="col-md-3 shop-sidebar">
-							<div class="row">
-								<div class="col-md-12"></div>
-
-								<div class="col-md-12"></div>
-
 								<div class="col-md-12">
-									<div class="widget categories-widget">
-										<h2 class="widget-title">categorias</h2>
-										<ul>
-											<li>
-												<i class="fa fa-angle-double-right "></i>
-												<a  id="quitarFiltro" class="fixCategoria">TODO</a>
-											</li>
-											<% if @categoria.present? %>	
-												<% @categoria.each do |item| %>
-													<li data-categoria="<%= item['nombre'] %>">
-														<i class="fa fa-angle-double-right "></i>
-														<a  class="filtroCat fixCategoria"><%= item['nombre'] %></a>
-													</li>
-												<% end %>
-											<% end %>																			
-										</ul>
-									</div>
-								</div>					
+									<h1 class="product-title"><%= @producto[0].nombre %></h1>
+								</div>
+
 							</div>
-						</div>
+							<div class="row product-summry">
+								<div class="col-md-5 product-box">									
+									<div class="product-wrap"><img src="<%= @producto[0].foto %>" alt=""></div>									
+								</div>
+								<div class="col-md-7 summry-details">
+									<h2 class="product-title">PRECIO</h2>
+									<% if @producto[0].oferta != 0 %>
+									<p class="price">
+										<span class="price-del">$<%= @producto[0].precio %></span> &nbsp; &nbsp; &nbsp;$<%= @producto[0].oferta %>
+									</p>
+									<% else %>
+										<p class="price">$<%= @producto[0].precio %></p>
+									<% end %>
+									<div class="product_meta">
+										<span class="posted_in">Categoría:
+											<a><%= @producto[0].categoria.nombre %></a>											
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="row woo-commerce-tabs">
+								<div class="col-md-12 st-tabs-second">									
+									<div role="tabpanel">										
+										
+										<ul class="nav nav-tabs" role="tablist">
+											<li role="presentation" class="active">
+												<a href="#one" aria-controls="home" role="tab" data-toggle="tab">Descripción</a>
+											</li>
+										</ul>
+										<div class="tab-content">
+											<div role="tabpanel" class="tab-pane fade in active" id="one">
+												<h2><%= @producto[0].nombre %></h2>
+												<p><%= @producto[0].descripcion %></p>
+											</div>
+											<div role="tabpanel" class="tab-pane fade" id="two">
+												<h2>Información</h2>
+												<table class="shop_attributes">
+													<tbody>
+														<tr class="">
+															<th>Color</th>
+															<td>
+																<p>Negro, cafe</p>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+
+										</div>										
+									</div>									
+								</div>								
+							</div>														
+						</div>					
 					</div>
 				</div>
 			</div>
+
 		</div>
+
 		<div id="footer" class="footer-section">
 			<div class="container">
 				<div class="row">
@@ -283,22 +260,5 @@
 		<script type="text/javascript" src="/assets/pagina/js/jquery.easing.1.3.js"></script> 
 		<script type="text/javascript" src="/assets/pagina/js/camera.js"></script> 
 		<script type="text/javascript" src="/assets/pagina/js/script.js"></script> 
-		<script>
-			function inicio(e) {
-				$('.filtroCat').on('click', function(e) {
-					debugger
-					var filtro = $(e.currentTarget).parent('li').data('categoria');
-					var productoFiltrado = $('.'+filtro);
-					var productos = $('.itemProducto').addClass('is-hidden');
-					productoFiltrado.removeClass('is-hidden');
-				});
-				$('#quitarFiltro').on('click', function(e) {
-					debugger					
-					var productos = $('.itemProducto').removeClass('is-hidden');					
-				});
-			}
-
-			$(document).on('ready', inicio);
-		</script>
 	</body>
 </html>

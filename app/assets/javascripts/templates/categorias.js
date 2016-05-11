@@ -1,6 +1,7 @@
 var MoModel = Backbone.Model.extend({
 	defaults: {
 		idCategoria :0,
+		activo :1,
 		nombre 		:'',
 	}
 });

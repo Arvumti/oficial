@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151130190259) do
+ActiveRecord::Schema.define(version: 20160511075623) do
 
   create_table "categorias", primary_key: "idCategoria", force: true do |t|
     t.string   "nombre"
@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 20151130190259) do
     t.float    "precio",      limit: 24
     t.float    "oferta",      limit: 24
     t.integer  "idCategoria"
-    t.string   "descripcion"
+    t.text     "descripcion"
     t.string   "foto"
     t.date     "vigencia"
     t.integer  "activo",                 default: 1
